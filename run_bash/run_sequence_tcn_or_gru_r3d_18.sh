@@ -1,0 +1,23 @@
+python train_sequence_tcn_or_gru.py \
+    --log_file="new/train_sequence_r3d_18_chunk10_ep10_new_splits_batch64_epoch200_tcn_bn_dropout0.2_hsize128_level2.log" \
+    --path="data/train/*/*" \
+    --load_model='' \
+    --gpu=0 \
+    --learning_rate=0.0005 \
+    --weight_decay=0. \
+    --pos_weight=1. \
+    --dropout=0.2 \
+    --batch_size=64 \
+    --chunk_size=10 \
+    --feature_dir="features/new/r3d_18_chunk10_batch16_epoch10_new_splits" \
+    --seq_model='TCN'\
+    --seq_len=40 \
+    --feature_size=512 \
+    --hidden_size=128 \
+    --levels=2 \
+    --kernel_size=3 \
+    --num_epochs=200 \
+    --model_dir="new/sequence_r3d_18_chunk10_ep10_new_splits_batch64_tcn_bn_dropout0.2_hsize128_level2" \
+    --diff \
+    --maxpool \
+    --no-batchnorm
